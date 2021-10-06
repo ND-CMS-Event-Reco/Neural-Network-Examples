@@ -1,5 +1,5 @@
 To do:
-  1) Change device in neural network to the gpu
+  1) Make sure that program properly uses gpu to make training faster 
     - Juwan
   2) Plot using tensors in pytorch instead of the for loop and regular arrays
     - Ask Kristin
