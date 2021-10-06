@@ -1,4 +1,8 @@
 To do:
   1) Change device in neural network to the gpu
+    - Juwan
   2) Plot using tensors in pytorch instead of the for loop and regular arrays
+    - Ask Kristin
   3) Use a function to define the function the neural network will be dealing with
+  4) Clean up existing code with functions and global variables
+    - Rachel
