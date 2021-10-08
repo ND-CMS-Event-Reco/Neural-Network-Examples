@@ -8,4 +8,6 @@ To do:
   4) DONE Clean up existing code with functions and global variables
     - Rachel and Juwan
 
-  
+  5) Fix plot with array instead of for loop (linspace??)
+  6) x^2 cos y
+  7) read transformer paper
