@@ -1,8 +1,11 @@
 To do:
-  1) Make sure that program properly uses gpu to make training faster 
-    - Juwan
+  1) DONE Make sure that program properly uses gpu to make training faster 
+    - Everyone during meeting
   2) Plot using tensors in pytorch instead of the for loop and regular arrays
-    - Ask Kristin
-  3) Use a function to define the function the neural network will be dealing with
-  4) Clean up existing code with functions and global variables
-    - Rachel
+    - Ask Kristin?
+  3) DONE Use a function to define the function the neural network will be dealing with
+    - Juwan
+  4) DONE Clean up existing code with functions and global variables
+    - Rachel and Juwan
+
+  
