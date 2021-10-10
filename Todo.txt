@@ -9,5 +9,6 @@ To do:
     - Rachel and Juwan
 
   5) Fix plot with array instead of for loop (linspace??)
-  6) x^2 cos y
-  7) read transformer paper
+  6) Use a for loop to build n layers of the neural network (Lannon said it wasn't a sin in this case)
+  7) x^2 cos y
+  8) read transformer paper
