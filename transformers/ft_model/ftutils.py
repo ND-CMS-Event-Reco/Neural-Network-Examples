@@ -6,6 +6,7 @@ import torch.nn as nn
 import math
 import copy
 
+
 ####################################
 #  Data generation + manipulation  #
 ####################################
@@ -78,11 +79,12 @@ def exponentiateTensors(ten1, ten2):
     
    
 
+
 ###############################
 #       Training              #
 ###############################   
 
-def train_epoch(model, opt, criterion, device, data_batches, target_batches, num_batch, verbose = False):
+def train_epoch(model, opt, criterion, scheduler, device, data_batches, target_batches, num_batch, verbose = False):
     ''' Train transformer model
     
         Args:
@@ -126,17 +128,18 @@ def train_epoch(model, opt, criterion, device, data_batches, target_batches, num
         opt.step()
 
         total_loss += loss.detach().item()
-    
+        
+    scheduler.step()
     return total_loss
     
-def train(model, n_epochs, opt, criterion, device, data_batches, target_batches, num_batch):
+def train(model, n_epochs, opt, criterion, scheduler, device, data_batches, target_batches, num_batch):
     best_loss = 10000.0
     best_model = copy.deepcopy(model).to(device)
     loss_ = np.array([])
     epochs = np.array([])
     
     for i in range(n_epochs):
-        loss = train_epoch(model, opt, criterion, device, data_batches, target_batches, num_batch)
+        loss = train_epoch(model, opt, criterion, scheduler, device, data_batches, target_batches, num_batch)
         loss_ = np.append(loss_, loss)
         epochs = np.append(epochs, i)
         
