@@ -45,6 +45,8 @@ def generateSeqs(N, in_len, data_range = (-1, 1), operation = 'subtraction',
         op_func = divideTensors
     elif operation == 'power':
         op_func = exponentiateTensors
+    elif operation == 'norm':
+        op_func = normTensors
     
     for i in np.arange(0, in_len - 1, 1):
         target[:, i] = op_func(data[:, i], data[:, i + 1])
@@ -74,9 +76,11 @@ def multiplyTensors(ten1, ten2):
 def divideTensors(ten1, ten2):
     return torch.mul(ten1, 1/ten2)
 
-def exponentiateTensors(ten1, ten2):
-    return torch.pow(ten1, ten2)
+def normTensors(ten1, ten2):
+    return torch.pow(ten1**2 + ten2**2, 0.5)
     
+def exponentiateTensors(ten1, ten2):
+    return torch.pow(ten1, ten2)    
    
 
 
